@@ -5,7 +5,10 @@ body {
     color: white;
 }
 header {
+    width: 100%;
     height: 140px;
+    position: fixed;
+    background-color: #383838;
 }
 .header-container {
     justify-content: center;
@@ -16,7 +19,8 @@ header {
     margin: 0 auto;
 }
 .mainbar {
-    width: 1060px;
+    padding-top: 150px;
+    width: 1030px;
     text-indent: 50px;
     text-align: justify;
     font-size: 26px;
@@ -26,27 +30,35 @@ header {
     text-indent: 0px;
     text-align: center;
 }
+.mainbar h4 {
+    text-indent: 0px;
+    text-align: center;
+}
 .mainbar li {
     text-indent: 0px;
     margin-left: 50px;
 }
 .main-img {
     display: flex;
+    width: 100%;
     height: auto;
     gap: 10px;
-    align-content: space-between;
 }
 .main-img img {
-    width: 520px;
-    height: 350px;
+    width: 400px;
+    height: auto;
     align-self: center;
+}
+.main-image {
+    display: flex;
+    justify-content: center;
 }
 .sidebar {
     height: 745px;
     width: 400px;
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 200px;
     position: fixed;
 }
 .block {
@@ -67,4 +79,15 @@ header {
     text-decoration: none;
     color: white;
     font-size: 28px;
+}
+.books {
+    display: flex;
+    gap: 40px;
+}
+.books h4 {
+    text-align: center;
+}
+.books img {
+    width: 300px;
+    height: auto;
 }
