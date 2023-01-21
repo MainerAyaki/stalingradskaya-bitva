@@ -69,6 +69,7 @@ header {
 .block {
     border: 1px solid black;
     height: 80px;
+    background-color: #505050;
     vertical-align: middle;
     padding-left: 15px;
     padding-top: 10px;
