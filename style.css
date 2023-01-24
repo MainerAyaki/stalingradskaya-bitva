@@ -21,12 +21,11 @@ header {
 }
 .mainbar {
     padding-top: 12%;
-    width: 1030px;
+    width: 68%;
     text-indent: 50px;
     text-align: justify;
     font-size: 26px;
     float: right;
-    min-height: 41.2vw;
 }
 .mainbar h3 {
     text-indent: 0px;
@@ -61,7 +60,6 @@ header {
     justify-content: center;
 }
 .sidebar {
-    height: 745px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -116,4 +114,38 @@ header {
     width: 100%;
     height: 604px;
     text-align: left;
+}
+footer {
+    background-color: #2c2c2c;
+    height: 260px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: rgb(175, 175, 175);
+}
+.footer {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-around;
+    width: 80%;
+    margin-top: 30px;
+    gap: 30px;
+}
+.footer-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 10px;
+}
+.footer-name {
+    font-size: 24px;
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+}
+.group-one {
+    width: 400px;
+    text-align: center;
+}
+.group-two {
+    width: 340px;
 }
