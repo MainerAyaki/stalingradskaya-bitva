@@ -13,14 +13,9 @@ header {
     justify-content: center;
     align-items: center;
 }
-.header-container {
-    padding-top: 10px;
-    justify-content: center;
-    text-align: center;
-}
 .header-container img {
     width: auto;
-    height: 150px;
+    height: 120px;
 }
 .container {
     max-width: 1480px;
