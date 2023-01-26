@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    background-repeat: no-repeat;
 }
 header {
     width: 100%;
