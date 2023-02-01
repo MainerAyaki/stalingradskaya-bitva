@@ -4,36 +4,53 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 header {
     width: 100%;
-    height: 15%;
-    position: fixed;
+    height: 150px;
     background-color: #383838;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky; 
+    top:0;
     border-bottom: 3px solid #e4350c;
 }
-.header-container img {
-    width: auto;
-    height: 120px;
+.header-container {
+    display: flex;
+    justify-content: center;
 }
+.header-container img {
+    width: 80%;
+}
+.header_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
 .container {
-    max-width: 1480px;
+    width: 78%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 .mainbar {
-    padding-top: 12%;
-    width: 68%;
+    width: 66%;
     text-indent: 50px;
     text-align: justify;
     font-size: 26px;
-    float: right;
+    margin-left: 480px;
 }
 .mainbar h3 {
     text-indent: 0px;
     text-align: center;
+    margin: 0;
 }
 .mainbar h4 {
     text-indent: 0px;
@@ -44,6 +61,7 @@ header {
     margin-left: 50px;
 }
 .mainbar hr {
+    width: 100%;
     height: 2px;
     border: 1px solid #7c7c7c;
     background-color: #7c7c7c;
@@ -67,8 +85,11 @@ header {
     width: 400px;
     display: flex;
     flex-direction: column;
-    padding-top: 180px;
+    overflow: hidden;
     position: fixed;
+}
+.sidebar .icon {
+    display: none;
 }
 .block {
     border: 1px solid black;
@@ -79,7 +100,6 @@ header {
     border-left: 10px solid black;
     transition: 0.3s all linear;
     display: flex;
-    align-self: center;
 }
 .block:hover {
     background-color: #383838;
@@ -91,16 +111,20 @@ header {
     color: white;
     font-size: 28px;
 }
-.books {
-    display: flex;
-    gap: 40px;
-}
 .books img {
     width: 300px;
     height: auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 .participant {
     gap: 40px;
+    width: 100%;
+}
+.participants {
+    display: flex;
+    flex-direction: column;
 }
 .participants h4 {
     text-align: left;
@@ -120,11 +144,18 @@ header {
     height: 590px;
     text-align: left;
 }
-.picture h4 {
-    text-align: left;
+.pictures {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .picture {
-    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.picture h4 {
+    text-align: center;
 }
 .picture img {
     width: 300px;
@@ -135,18 +166,15 @@ header {
 .hero h4 {
     text-align: left;
 }
-.hero {
-    gap: 40px;
-}
 .hero img {
     width: 300px;
     height: auto;
     float: left;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 footer {
     background-color: #2c2c2c;
-    height: 10vw;
+    height: auto;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -156,16 +184,17 @@ footer {
 }
 .footer-main {
     display: flex;
-    width: 77.5%;
+    width: 78%;
     flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 .footer-top {
     display: flex;
     width: 100%;
     align-items:flex-start;
-    justify-content: space-between;
     margin-top: 20px;
-    gap: 20px;
+    gap: 10%;
 }
 .footer-bottom {
     justify-content: left;
@@ -182,4 +211,128 @@ footer {
     font-size: 20px;
     text-decoration: none;
     color: rgb(196, 194, 194);
+}
+
+@media screen and (max-width: 1400px) {
+    .presentation {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        gap: 0;
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .mainbar {
+        margin-top: 70px;
+        margin-left: 0px;
+        width: 90%;
+    }
+    header {
+        height: 8vh;
+        z-index: 1;
+    }
+    .header-container img {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+        position: fixed;
+    }
+    .sidebar a {
+        font-size: 26px;
+    }
+    .sidebar a:not(:first-child) {display: none;}
+    .sidebar a.icon {
+        float: right;
+        display: block;
+    }
+    .sidebar.responsive {position: fixed;}
+    .sidebar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .sidebar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .block {
+        height: 40px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 0.8em;
+    }
+    .books {
+        gap: 20px;
+    }
+    .books img {
+        width: 120px;
+        height: 220px;
+    }
+    .books p {
+        font-size: 16px;
+    }
+    .hero img {
+        width: 120px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .footer-name {
+        font-size: 10px;
+    }
+    .picture p {
+        font-size: 18px;
+    }
+    .picture img {
+        width: 44%;
+        height: auto;
+    }
+    .participant img {
+        width: 30%;
+        height: auto;
+    }
+    .participant p {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer-top {
+        gap: 6%;
+    }
+}
+@media screen and (max-width: 415px) {
+    .footer-name {
+        font-size: 8px;
+    }
+    .participant p {
+        font-size: 18px;
+    }
+    .participant img {
+        width: 42%;
+        height: auto;
+    }
+}
+@media screen and (max-height: 950px) {
+    .block {
+        height: 38px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
 }
