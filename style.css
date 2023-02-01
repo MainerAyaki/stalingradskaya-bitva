@@ -4,7 +4,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100%;;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +141,7 @@ header {
 }
 .presentation {
     width: 100%;
-    height: 590px;
+    height: 580px;
     text-align: left;
 }
 .pictures {
@@ -310,10 +310,16 @@ footer {
     .participant p {
         font-size: 20px;
     }
+    .presentation {
+        height: 330px;
+    }
 }
 @media screen and (max-width: 500px) {
     .footer-top {
         gap: 6%;
+    }
+    .presentation {
+        height: 280px;
     }
 }
 @media screen and (max-width: 415px) {
@@ -327,6 +333,9 @@ footer {
         width: 42%;
         height: auto;
     }
+    .presentation {
+        height: 230px;
+    }
 }
 @media screen and (max-height: 950px) {
     .block {
@@ -334,5 +343,8 @@ footer {
     }
     .sidebar a {
         font-size: 18px;
+    }
+    .container {
+        min-height: 720px;
     }
 }
